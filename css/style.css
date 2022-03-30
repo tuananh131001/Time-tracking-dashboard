@@ -1,14 +1,19 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   top: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  display: -ms-grid;
   display: grid;
   place-items: center;
-  min-height: 100vh;
+  background-color: red;
 }
+
+.container-top img {
+  width: 10rem;
+}
+
 /*# sourceMappingURL=style.css.map */
