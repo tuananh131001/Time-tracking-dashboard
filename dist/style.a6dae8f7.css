@@ -1,0 +1,17 @@
+*, *::after, *::before {
+  top: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+main {
+  display: none;
+}
+
+/*# sourceMappingURL=/style.a6dae8f7.css.map */
