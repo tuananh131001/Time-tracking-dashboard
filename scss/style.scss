@@ -1,23 +1,141 @@
+@use "abstract/colors";
 *,
 *::after,
 *::before {
-  top: 0;
+  padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-$red: red;
+@mixin flex-center($direction, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: $justify;
+}
 
 body {
-  display: grid;
-  place-items: center;
-  background-color: $red;
+  @include flex-center(column, center);
+  background-color: colors.$Very-dark-blue;
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  gap: 1em;
 }
-main{
+main {
+  width: 87%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
 }
 
-.container-top{
-    img{
-        width: 10rem;
-    }
+.container-top {
+  display: grid;
+}
+
+.profile-canvas {
+  & {
+    @include flex-center(row, flex-start);
+    background-color: colors.$blue;
+    padding: 1.6em;
+    border-radius: 0.5rem;
+    z-index: 1;
+    gap: 1.2em;
+  }
+  img {
+    width: 4rem;
+    border: 3px solid #fff;
+    border-radius: 50%;
+  }
+  .right-profile {
+    line-height: 1.5rem;
+  }
+  .report-for {
+    font-size: 0.8rem;
+    color: colors.$Soft-blue;
+  }
+  .name {
+    color: colors.$Pale-blue;
+    font-size: 1.2rem;
+    font-weight: 400;
+    word-spacing: 0.5rem;
+  }
+}
+
+.time-select {
+  @include flex-center(row, space-between);
+  margin-top: -0.5em;
+  padding: 1.5em;
+  z-index: -1;
+  width: 100%;
+  list-style: none;
+  background-color: colors.$Dark-blue;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+@mixin content-box {
+  .weekly {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.8rem;
+    margin-top: 2rem;
+    padding: 1.8em;
+    gap: 0.5em;
+    background-color: colors.$Dark-blue;
+  }
+  .up-wrapper {
+    @include flex-center(row, space-between);
+  }
+  .bottom-wrapper {
+    @include flex-center(row, space-between);
+  }
+  .title {
+    font-size: 1.4rem;
+  }
+  .time {
+    font-weight: 300;
+    font-size: 2rem;
+  }
+  .date-time {
+    color: colors.$Pale-blue;
+  }
+}
+
+.work {
+  border: 0.1px solid black;
+  border-radius: 0.9rem;
+  background-color: colors.$Light-red;
+  @include content-box();
+}
+
+// .work::before{
+//   content: url(/images/icon-work.svg);
+// }
+
+@mixin canvas($color) {
+  border: 0.1px solid black;
+  border-radius: 0.9rem;
+  background-color: $color;
+}
+
+.play {
+  @include canvas(colors.$Soft-blue);
+  @include content-box();
+}
+.study {
+  @include canvas(colors.$Light-red);
+  @include content-box();
+}
+
+.excercise {
+  @include canvas(colors.$Lime-green);
+  @include content-box();
+}
+.social {
+  @include canvas(colors.$Violet);
+  @include content-box();
+}
+
+.self-care {
+  @include canvas(colors.$Soft-orange);
+  @include content-box();
 }
