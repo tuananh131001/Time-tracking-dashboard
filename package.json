@@ -1,6 +1,5 @@
 {
   "devDependencies": {
-    "parcel-bundler": "^1.12.5",
     "sass": "^1.49.9"
   },
   "name": "time-tracking-dashboard",
@@ -26,8 +25,8 @@
     "to-regex-range": "^5.0.1"
   },
   "scripts": {
-   "dev": "parcel index.html",
-   "build": "parcel build index.html"
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
