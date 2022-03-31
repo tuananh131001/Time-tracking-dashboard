@@ -75,7 +75,11 @@ main {
 .work {
   border: 0.1px solid black;
   border-radius: 0.9rem;
-  background-color: #ff5c7c;
+  background-color: #ff8c66;
+  background-color: #ff8c66;
+  background-image: url(/images/icon-work.svg);
+  background-repeat: no-repeat;
+  background-position: 95% top;
 }
 .work .weekly {
   display: flex;
@@ -110,6 +114,10 @@ main {
 }
 
 .play {
+  background-color: #ff8c66;
+  background-image: url(/images/icon-play.svg);
+  background-repeat: no-repeat;
+  background-position: 95% top;
   border: 0.1px solid black;
   border-radius: 0.9rem;
   background-color: #56c2e6;
@@ -147,6 +155,10 @@ main {
 }
 
 .study {
+  background-color: #ff8c66;
+  background-image: url(/images/icon-study.svg);
+  background-repeat: no-repeat;
+  background-position: 95% top;
   border: 0.1px solid black;
   border-radius: 0.9rem;
   background-color: #ff5c7c;
@@ -184,6 +196,10 @@ main {
 }
 
 .excercise {
+  background-color: #ff8c66;
+  background-image: url(/images/icon-exercise.svg);
+  background-repeat: no-repeat;
+  background-position: 95% top;
   border: 0.1px solid black;
   border-radius: 0.9rem;
   background-color: #4acf81;
@@ -221,6 +237,10 @@ main {
 }
 
 .social {
+  background-color: #ff8c66;
+  background-image: url(/images/icon-social.svg);
+  background-repeat: no-repeat;
+  background-position: 95% top;
   border: 0.1px solid black;
   border-radius: 0.9rem;
   background-color: #7536d3;
@@ -258,6 +278,10 @@ main {
 }
 
 .self-care {
+  background-color: #ff8c66;
+  background-image: url(/images/icon-self-care.svg);
+  background-repeat: no-repeat;
+  background-position: 95% top;
   border: 0.1px solid black;
   border-radius: 0.9rem;
   background-color: #f1c65b;

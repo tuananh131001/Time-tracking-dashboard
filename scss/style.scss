@@ -99,17 +99,12 @@ main {
     color: colors.$Pale-blue;
   }
 }
-
-.work {
-  border: 0.1px solid black;
-  border-radius: 0.9rem;
-  background-color: colors.$Light-red;
-  @include content-box();
+@mixin icon($url) {
+  background-color: colors.$work;
+  background-image: $url;
+  background-repeat: no-repeat;
+  background-position: 95% top ;
 }
-
-// .work::before{
-//   content: url(/images/icon-work.svg);
-// }
 
 @mixin canvas($color) {
   border: 0.1px solid black;
@@ -117,25 +112,39 @@ main {
   background-color: $color;
 }
 
+
+.work {
+  @include canvas(colors.$work);
+  @include icon(url(/images/icon-work.svg));
+  @include content-box();
+}
+
+
 .play {
+  @include icon(url(/images/icon-play.svg));
   @include canvas(colors.$Soft-blue);
   @include content-box();
 }
+
 .study {
+  @include icon(url(/images/icon-study.svg));
   @include canvas(colors.$Light-red);
   @include content-box();
 }
 
 .excercise {
+  @include icon(url(/images/icon-exercise.svg));
   @include canvas(colors.$Lime-green);
   @include content-box();
 }
 .social {
+  @include icon(url(/images/icon-social.svg));
   @include canvas(colors.$Violet);
   @include content-box();
 }
 
 .self-care {
+  @include icon(url(/images/icon-self-care.svg));
   @include canvas(colors.$Soft-orange);
   @include content-box();
 }
