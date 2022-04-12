@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "sass": "^1.49.9"
+    "sass": "^1.50.0"
   },
   "name": "time-tracking-dashboard",
   "description": "![Design preview for the Time tracking dashboard coding challenge](./design/desktop-preview.jpg)",
